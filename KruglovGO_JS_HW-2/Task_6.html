@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 6</title>
+</head>
+
+<body>
+    <script>
+        let contribution, roubleWordVariant;
+        while (true) {
+            contribution = prompt("Введите сумму взноса:");
+            if (Number(contribution) > 0) {
+                break;
+            }
+        }
+        if (contribution.length > 1 && +contribution.slice(-2) > 10 && +contribution.slice(-2) < 15) {
+            roubleWordVariant = "рублей";
+        }
+        else {
+            switch (+contribution.slice(-1)) {
+            case 1:
+                roubleWordVariant = "рубль";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                roubleWordVariant = "рубля";
+                break;
+            default:
+                roubleWordVariant = "рублей";
+            }
+        }
+        alert("Ваша сумма в " + contribution + " " + roubleWordVariant + " успешно зачислена.")
+    </script>
+</body>
+
+</html>

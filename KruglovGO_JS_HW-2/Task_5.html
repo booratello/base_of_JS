@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 5</title>
+</head>
+
+<body>
+    <script src="validation.js"></script>
+    <script src="mathOperations.js"></script>
+    <script>
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+            case "+":
+                return a + " + " + b + " = " + doSum(arg1, arg2);
+            case "-":
+                return a + " - " + b + " = " + doDiff(arg1, arg2);
+            case "*":
+                return a + " * " + b + " = " + doMult(arg1, arg2);
+            case "/":
+                return a + " \/ " + b + " = " + doDiv(arg1, arg2);
+            default:
+                alert("Вы указали неизвестный знак математической операции.\nПопробуйте снова.");
+                operation = prompt("Ведите знак математической операции:");
+                return mathOperation(arg1, arg2, operation);
+            }
+        }
+        let a = doValidation("arg1");
+        let b = doValidation("arg2");
+        let sign = prompt("Ведите знак математической операции:");
+        alert(mathOperation(a, b, sign));
+    </script>
+</body>
+
+</html>
