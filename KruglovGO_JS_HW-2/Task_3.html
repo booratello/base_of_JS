@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+</head>
+
+<body>
+    <script src="validation.js"></script>
+    <script>
+        let a = doValidation("a");
+        let b = doValidation("b");
+        let result;
+        if (a >= 0 && b >= 0) {
+            result = a - b;
+            alert("Оба числа положительные, их разность равна " + result + ".");
+        }
+        else if (a < 0 && b < 0) {
+            result = a * b;
+            alert("Оба числа отрицательные, их произведение равно " + result + ".");
+        }
+        else {
+            /* решил, что нет смысла пользоваться Math.sign(), т.к. если не пройдены обе предыдущие проверки, 
+                то числа автоматически имеют разные знаки и просто выполнится ветка else*/
+            result = a + b;
+            alert("Числа имеют разные знаки, их сумма равна " + result + ".");
+        }
+    </script>
+</body>
+
+</html>
