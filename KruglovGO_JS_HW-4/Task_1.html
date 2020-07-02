@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+</head>
+
+<body>
+    <script>
+        
+        "use strict";
+        
+        function convertNumToObj(num) {
+            
+            num = +num;
+            if (isNaN(num) || !Number.isInteger(num) || num < 0 || num > 999) {
+                return alert("Ошибка ввода. Попробуйте снова.");
+            }
+            
+            let numObj = {
+                units: 0
+                , tens: 0
+                , hundreds: 0
+            }
+            
+            if (num < 10) {
+                numObj.units = num;
+            }
+            
+            else if (num < 100) {
+                numObj.units = num % 10;
+                numObj.tens = Math.floor(num / 10);
+            }
+            
+            else {
+                numObj.hundreds = Math.floor(num / 100);
+                num = num % 100;
+                numObj.units = num % 10;
+                numObj.tens = Math.floor(num / 10);
+            }
+            
+            return numObj;
+        }
+        
+        let user_num = prompt("Введите целое число в диапазоне [0;999]:");
+        
+        user_num = convertNumToObj(user_num);
+        
+        if (user_num !== undefined) {
+            alert("Единицы: " + user_num.units + "\nДесятки: " + user_num.tens + "\nСотни: " + user_num.hundreds);
+        }
+        
+    </script>
+</body>
+
+</html>

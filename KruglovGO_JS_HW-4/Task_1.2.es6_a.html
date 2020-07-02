@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1.2.es6-a</title>
+</head>
+
+<body>
+    <script>
+        
+        "use strict";
+        class Post {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            };
+            
+            edit(new_text) {
+                this.text = new_text;
+            };
+        };
+        
+        let post1 = new Post("Татьяна N", "Ничего не выйдет, я замужем.", "хх.хх.1824");
+        console.log("author: " + post1.author + ", text: " + post1.text + ", date: " + post1.date);
+        
+        post1.edit("Я к вам пишу – чего же боле?");
+        
+        console.log("author: " + post1.author + ", text: " + post1.text + ", date: " + post1.date);
+        
+    </script>
+</body>
+
+</html>

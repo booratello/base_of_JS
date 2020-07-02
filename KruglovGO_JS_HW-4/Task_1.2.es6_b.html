@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1.2.es6-b</title>
+</head>
+
+<body>
+    <script>
+        
+        "use strict";
+        
+        class Post {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            };
+            
+            edit(new_text) {
+                this.text = new_text;
+            };
+        };
+        
+        class AttachedPost extends Post {
+            constructor(author, text, date) {
+                super(author, text, date);
+                this.highlighted = false;
+            };
+            
+            makeTextHighlighted() {
+                this.highlighted = true;
+            };
+        };
+        
+        let attpost1 = new AttachedPost("Татьяна N", "Ничего не выйдет, я замужем.", "хх.хх.1824");
+        
+        console.log("author: " + attpost1.author + ", text: " + attpost1.text + ", date: " + attpost1.date + ", highlight: " + attpost1.highlighted);
+        
+        attpost1.edit("Я к вам пишу – чего же боле?");
+        
+        console.log("author: " + attpost1.author + ", text: " + attpost1.text + ", date: " + attpost1.date + ", highlight: " + attpost1.highlighted);
+        
+        attpost1.makeTextHighlighted();
+        
+        console.log("author: " + attpost1.author + ", text: " + attpost1.text + ", date: " + attpost1.date + ", highlight: " + attpost1.highlighted);
+        
+    </script>
+</body>
+
+</html>
