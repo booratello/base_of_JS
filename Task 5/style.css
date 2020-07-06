@@ -1,0 +1,21 @@
+table {
+    background-color: black;
+}
+
+td {
+    text-align: center;
+    width: 50px;
+    background-color: white;
+}
+
+tr {
+    height: 50px;
+}
+
+.black {
+    background-color: transparent;
+}
+
+.streak {
+    background: repeating-linear-gradient(-45deg, white, white 1px, transparent 1px, transparent 2px);
+}
