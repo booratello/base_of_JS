@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1.1.es6</title>
+</head>
+
+<body>
+    <script>
+        
+        "use strict";
+        
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            };
+            
+            make25PercentDiscount() {
+                this.price = this.price * 0.75;
+            };
+        };
+        
+        let product1 = new Product("beer", 50);
+        let product2 = new Product("snack", 30);
+        
+        console.log("product: " + product1.name + ", price: " + product1.price);
+        console.log("product: " + product2.name + ", price: " + product2.price);
+        
+        product1.make25PercentDiscount();
+        
+        console.log("product: " + product1.name + ", price: " + product1.price);
+        console.log("product: " + product2.name + ", price: " + product2.price);
+        
+    </script>
+</body>
+
+</html>
