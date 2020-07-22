@@ -1,0 +1,49 @@
+* {
+    text-align: center;
+    margin: 0 auto; 
+}
+
+body {
+    background-size: 100vw 100vh;
+}
+
+input[type="radio"] {
+    margin-top: 250px;
+    margin-left: 25px;
+}
+
+div {
+    width: 50vw;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.fighter_name {
+    width: 100px;
+}
+
+.count_first_army_fighters,
+.count_second_army_fighters  {
+    width: 75px;
+}
+
+table, label {
+    background-color: white;
+}
+
+td{
+    padding-bottom: 5px;
+}
